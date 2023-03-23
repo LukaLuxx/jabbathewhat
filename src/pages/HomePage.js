@@ -7,7 +7,7 @@ import LightTheme from "../components/LightTheme";
 import ReactSwitch from "react-switch";
 import DarkTheme from "../components/DarkTheme";
 import { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import People from "./People";
 import Planets from "./Planets";
 import Species from "./Species";

@@ -8,50 +8,50 @@ import Species from "./pages/Species";
 import Starships from "./pages/Starships";
 
 function App() {
-    const [people, setPeople] = useState([]);
-    const [planets, setPlanets] = useState([]);
-    const [species, setSpecies] = useState([]);
-    const [starships, setStarships] = useState([]);
-    const [theme, setTheme] = useState("light");
+    // const [people, setPeople] = useState([]);
+    // const [planets, setPlanets] = useState([]);
+    // const [species, setSpecies] = useState([]);
+    // const [starships, setStarships] = useState([]);
+    // const [theme, setTheme] = useState("light");
 
-    useEffect(() => {
-        async function fetchPeople() {
-            const res = await fetch("https://swapi.dev/api/people?format=json");
-            // .then((response) => response.json())
-            // .then((data) => console.log(data));
-            const data = await res.json();
-            console.log(data.results);
-        }
+    // useEffect(() => {
+    //     async function fetchPeople() {
+    //         const res = await fetch("https://swapi.dev/api/people?format=json");
+    //         // .then((response) => response.json())
+    //         // .then((data) => console.log(data));
+    //         const data = await res.json();
+    //         console.log(data.results);
+    //     }
 
-        async function fetchPlanets() {
-            const res = await fetch(
-                "https://swapi.dev/api/planets?format=json"
-            );
-            // .then((response) => response.json())
-            // .then((data) => console.log(data));
-            const data = await res.json();
-            console.log(data.results);
-        }
+    //     async function fetchPlanets() {
+    //         const res = await fetch(
+    //             "https://swapi.dev/api/planets?format=json"
+    //         );
+    //         // .then((response) => response.json())
+    //         // .then((data) => console.log(data));
+    //         const data = await res.json();
+    //         console.log(data.results);
+    //     }
 
-        async function fetchSpecies() {
-            const res = await fetch("https://swapi.dev/api/species");
-            // .then((response) => response.json())
-            // .then((data) => console.log(data));
-            const data = await res.json();
-        }
-        async function fetchStarships() {
-            const res = await fetch("https://swapi.dev/api/starships");
-            // .then((response) => response.json())
-            // .then((data) => console.log(data));
-            const data = await res.json();
-        }
+    //     async function fetchSpecies() {
+    //         const res = await fetch("https://swapi.dev/api/species");
+    //         // .then((response) => response.json())
+    //         // .then((data) => console.log(data));
+    //         const data = await res.json();
+    //     }
+    //     async function fetchStarships() {
+    //         const res = await fetch("https://swapi.dev/api/starships");
+    //         // .then((response) => response.json())
+    //         // .then((data) => console.log(data));
+    //         const data = await res.json();
+    //     }
 
-        fetchPeople();
-        fetchSpecies();
-        fetchStarships();
-        fetchPlanets();
-    }, []);
-    console.log();
+    //     fetchPeople();
+    //     fetchSpecies();
+    //     fetchStarships();
+    //     fetchPlanets();
+    // }, []);
+    // console.log();
 
     return (
         <>

@@ -5,14 +5,7 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
-/* @media (min-width: 300px) and (max-width: 1200px) {
-}
-
-@media (max-height: 1200px) and (min-height: 300px) {
-} */
-
 #light {
-    /* background-color: aliceblue; */
     background: rgb(240, 248, 255);
     background: linear-gradient(
         90deg,
@@ -183,7 +176,7 @@
     }
 }
 
-.dropbtn {
+.dropbtn > button {
     padding: 15px;
     background: rgb(240, 248, 255);
     background: linear-gradient(
@@ -193,33 +186,36 @@
     );
     border-radius: 10%;
     text-decoration: underline blue;
-    font-size: 15px;
+    font-size: 30px;
+    margin: 20px;
+    display: grid;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn:hover {
+.dropbtn > h1 {
+    padding: 15px;
+    background: rgb(240, 248, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(240, 248, 255, 1) 0%,
+        rgba(183, 201, 34, 1) 47%
+    );
+    border-radius: 10%;
+    text-decoration: underline blue;
+    font-size: 32px;
     cursor: pointer;
 }
 
 .dropdown-content {
     position: absolute;
     background-color: gray;
-    min-width: 400px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 25%;
+    box-shadow: 0px 12px 16px 10px rgba(60, 8, 183, 0.2);
     z-index: 1;
     border-radius: 5%;
     text-decoration: underline red;
     line-height: 40px;
     padding: 8px 12px;
-}
-
-.dropdown-content h2 {
-    padding: 12px 16px;
-    display: block;
+    margin-top: -15px;
 }
 
 .enlarged {
@@ -237,4 +233,18 @@ a {
 
 #dark a {
     color: red;
+}
+
+.name-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.name-button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
 }
