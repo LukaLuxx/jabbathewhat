@@ -9,18 +9,18 @@ function People() {
     const [isOpen, setIsOpen] = useState(false);
     const [people, setPeople] = useState([]);
     const [activeName, setActiveName] = useState(null);
-    const [namePosition, setNamePosition] = useState(null);
+
     const names = [
         "Luke Skywalker",
         "Darth Vader",
         "Leia Organa",
         "Obi-Wan Kenobi",
         "C-3PO",
-        "R2-D2",
-        "R5-D4",
-        "Biggs Darklighter",
         "Owen Lars",
         "Beru Whitesun lars",
+        "Biggs Darklighter",
+        "R2-D2",
+        "R5-D4",
     ];
 
     useEffect(() => {
@@ -60,7 +60,7 @@ function People() {
                         {name}
                     </button>
                     {activeName === name && (
-                        <div className="dropdown" style={namePosition}>
+                        <div className="dropdown">
                             <div className="dropdown-content">
                                 {filteredPeople.map((person, index) => (
                                     <div key={index}>
