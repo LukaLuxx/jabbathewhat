@@ -27,7 +27,7 @@ function Starships() {
         axios.get("http://swapi.dev/api/starships/").then((response) => {
             setStarships(response.data.results);
         });
-    });
+    }, []);
 
     const toggleDropdown = (e) => {
         setIsOpen(!isOpen);
