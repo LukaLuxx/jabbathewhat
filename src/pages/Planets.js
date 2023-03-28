@@ -26,7 +26,6 @@ function Planets() {
     useEffect(() => {
         axios.get("http://swapi.dev/api/planets/").then((response) => {
             setPlanets(response.data.results);
-            console.log(response.data.results);
         });
     }, []);
 

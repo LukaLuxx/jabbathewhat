@@ -13,7 +13,7 @@
         rgba(55, 208, 220, 1) 100%
     );
     color: black;
-    height: 100vh;
+    height: 200vh;
     background-attachment: fixed;
 }
 
@@ -24,7 +24,7 @@
 #dark {
     background-color: black;
     color: aliceblue;
-    height: 100vh;
+    height: 300vh;
 }
 
 #dark .list2 > div {
