@@ -24,7 +24,7 @@ function Starships() {
     ];
 
     useEffect(() => {
-        axios.get("http://swapi.dev/api/starships/").then((response) => {
+        axios.get("https://swapi.dev/api/starships/").then((response) => {
             setStarships(response.data.results);
         });
     }, []);

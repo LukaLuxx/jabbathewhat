@@ -24,7 +24,7 @@ function Planets() {
     ];
 
     useEffect(() => {
-        axios.get("http://swapi.dev/api/planets/").then((response) => {
+        axios.get("https://swapi.dev/api/planets/").then((response) => {
             setPlanets(response.data.results);
         });
     }, []);

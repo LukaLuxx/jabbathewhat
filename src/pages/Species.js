@@ -24,7 +24,7 @@ function Species() {
     ];
 
     useEffect(() => {
-        axios.get("http://swapi.dev/api/species/").then((response) => {
+        axios.get("https://swapi.dev/api/species/").then((response) => {
             setSpecies(response.data.results);
         });
     }, []);
