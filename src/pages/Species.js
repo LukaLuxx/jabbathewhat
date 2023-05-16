@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import LightTheme from "../components/LightTheme";
-import DarkTheme from "../components/DarkTheme";
+import React, { useEffect, useState, useContext } from "react";
 import ReactSwitch from "react-switch";
+import DarkTheme from "../components/DarkTheme";
+import LightTheme from "../components/LightTheme";
+import { ThemeContext } from "../components/Theme";
 
 function Species() {
-    const [theme, setTheme] = useState("light");
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [isOpen, setIsOpen] = useState(false);
     const [species, setSpecies] = useState([]);
     const [activeSpecie, setActiveSpecie] = useState(null);
@@ -34,10 +35,6 @@ function Species() {
         setActiveSpecie(
             activeSpecie === e.target.innerText ? null : e.target.innerText
         );
-    };
-
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
 
     const filteredSpecies = activeSpecie

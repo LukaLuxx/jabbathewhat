@@ -1,4 +1,5 @@
-import React from "react";
+//
+import React, { useContext, useEffect } from "react";
 import "../App.css";
 import logo from "../images/people.jpg";
 import logo1 from "../images/films.jpg";
@@ -6,18 +7,17 @@ import logo2 from "../images/vehicles.jpg";
 import LightTheme from "../components/LightTheme";
 import ReactSwitch from "react-switch";
 import DarkTheme from "../components/DarkTheme";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import People from "./People";
 import Planets from "./Planets";
 import Species from "./Species";
 import Starships from "./Starships";
+import { ThemeContext } from "../components/Theme"; // import ThemeContext here
 
 function HomePage() {
-    const [theme, setTheme] = useState("light");
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    };
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
     return (
         <div className="App" id={theme}>
             <p className="useTF">

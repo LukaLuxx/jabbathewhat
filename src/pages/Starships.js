@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import LightTheme from "../components/LightTheme";
-import DarkTheme from "../components/DarkTheme";
+import React, { useContext, useEffect, useState } from "react";
 import ReactSwitch from "react-switch";
+import DarkTheme from "../components/DarkTheme";
+import LightTheme from "../components/LightTheme";
+import { ThemeContext } from "../components/Theme";
 
 function Starships() {
-    const [theme, setTheme] = useState("light");
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [isOpen, setIsOpen] = useState(false);
     const [starships, setStarships] = useState([]);
     const [activeStarship, setActiveStarship] = useState(null);
@@ -34,10 +35,6 @@ function Starships() {
         setActiveStarship(
             activeStarship === e.target.innerText ? null : e.target.innerText
         );
-    };
-
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
 
     const filteredStarships = activeStarship

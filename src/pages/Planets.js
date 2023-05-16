@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import LightTheme from "../components/LightTheme";
-import DarkTheme from "../components/DarkTheme";
+import React, { useEffect, useState } from "react";
 import ReactSwitch from "react-switch";
+import DarkTheme from "../components/DarkTheme";
+import LightTheme from "../components/LightTheme";
+import { useTheme } from "../components/Theme";
 
 function Planets() {
-    const [theme, setTheme] = useState("light");
+    const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [planets, setPlanets] = useState([]);
     const [activePlanet, setActivePlanet] = useState(null);
@@ -34,10 +35,6 @@ function Planets() {
         setActivePlanet(
             activePlanet === e.target.innerText ? null : e.target.innerText
         );
-    };
-
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
 
     const filteredPlanets = activePlanet

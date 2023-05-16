@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import LightTheme from "../components/LightTheme";
 import DarkTheme from "../components/DarkTheme";
 import ReactSwitch from "react-switch";
+import { ThemeContext } from "../components/Theme";
 
 function People() {
-    const [theme, setTheme] = useState("light");
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [isOpen, setIsOpen] = useState(false);
     const [people, setPeople] = useState([]);
     const [activeName, setActiveName] = useState(null);
@@ -34,10 +35,6 @@ function People() {
         setActiveName(
             activeName === e.target.innerText ? null : e.target.innerText
         );
-    };
-
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
 
     const filteredPeople = activeName
